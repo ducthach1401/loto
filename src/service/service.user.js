@@ -257,3 +257,9 @@ module.exports.getNumber = async() => {
         number: temp
     }
 }
+
+var people = {}
+module.exports.checkPerson = async (data) => {
+    people[data.name] = data.paper;
+    return people;
+}

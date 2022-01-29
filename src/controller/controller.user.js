@@ -116,3 +116,12 @@ module.exports.getNumber = async (req, res) => {
     const result = await service.getNumber();
     res.json(result);
 }
+
+module.exports.checkPerson = async (req, res) => {
+    const data = {
+        name: res.locals.username,
+        paper: req.body.paper
+    }
+    const result = await service.checkPerson(data);
+    res.json(result);
+}

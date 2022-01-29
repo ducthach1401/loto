@@ -38,4 +38,6 @@ router.route('/reset')
 router.route('/number')
     .get(controller.getNumber);
 
+router.route('/check')
+    .post(authenUser, controller.checkPerson);
 module.exports = router;

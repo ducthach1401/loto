@@ -2,10 +2,10 @@ const express = require('express');
 const jwt = require('jsonwebtoken');
 
 module.exports = async function authenticateToken (req, res, next) {
-    const token = req.cookies.name;
+    const token = req.cookies.username;
     if (token){
         try {
-            res.locals.name = token;
+            res.locals.username = token;
             next();
         }
         catch(err) {

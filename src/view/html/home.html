@@ -15,7 +15,7 @@
 </head>
 <body>
    <div class="container">
-       <div class="row"><h1>Lô tô hội</h1></div>
+       <div class="row"><h1>Lô tô hội</h1></div>    
        <div class="row">
            <div class="col">
             <img src="../image/1.jpg" alt="paper1" id="paper1">
@@ -29,13 +29,23 @@
                 <button id="spin" onclick="spin()" class="btn btn-outline-primary">Spin</button>
                 <h3>Các số đã xổ: </h3>
                 <p id="past"></p>
-                <p id="note">* Không nhất reset hoặc spin nếu không phải là cái</p>
+           </div>
+       </div>
+       <div class="row mt-5">
+           <div class="col">
+            <p>Người chơi đã chọn</p>
+            <textarea name="chat" id="chat" cols="25" rows="5"></textarea>
+           </div>
+           <div class="col">
+                <p id="note">* Không nhấn reset hoặc spin nếu không phải là cái</p>
                 <button id="reset" onclick="reset()" class="btn btn-outline-danger">Reset</button>
                 <b><p>Chọn cho tờ thứ: </p></b>
                 <input type="radio" name="paper" id="choose1" value="1" checked>
                 <label for="choose1">Tờ thứ nhất </label> <br>
                 <input type="radio" name="paper" id="choose2" value="2">
                 <label for="choose2">Tờ thứ hai </label>
+           </div>
+           <div class="col">
                 <b><p>Chọn tờ khác:</p></b>
                 <p id="button">
                     <button id="p0" onclick="choosePaper(this.value);" value="0" class="btn btn-primary">Không chọn</button> <br>
@@ -51,6 +61,8 @@
                     for (let i = 0; i <= 9; i++) {
                         document.getElementById('past').innerHTML += '<p id="hang' + i + '">Hàng ' + i +':</p>';
                     }
+                    checkName();
+                    setInterval(checkPeople, 1000);
                 </script>
            </div>
        </div>
