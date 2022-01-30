@@ -1,15 +1,29 @@
 img {
-    height: 90%;
+    height: 100%;
     width: 100%;
 }
 
+canvas {
+    cursor: pointer;
+}
+
 .col {
-    height: 80% !important;
+    height: 90% !important;
     text-align: center;
 }
 
 .row {
     margin-bottom: 10px;
+}
+
+.overlay {
+  position: relative;
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 h1 {
