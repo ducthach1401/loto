@@ -235,6 +235,7 @@ module.exports.reset = async () =>{
     }
     temp = -1;
     loto = [];
+    people = {};
     return {
         message: 'success'
     }
