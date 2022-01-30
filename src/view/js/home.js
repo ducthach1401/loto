@@ -3,11 +3,11 @@ async function choosePaper(value) {
     if (value == 0){
         if (paper == 1){
             document.getElementById('paper1').src = '';
-            console.log(document.getElementById('paper1'));
         }
         else {
             document.getElementById('paper2').src = '';
         }
+        return;
     }
     if (paper == 1){
         document.getElementById('paper1').src = '../image/'+ value +'.jpg';
@@ -161,5 +161,3 @@ async function checkPeople() {
         chat.innerHTML += dem + '. ' + i + ' đã chọn tờ: ' +  data[i][0] + ' ' +  data[i][1] + '\n';
     }
 }
-
-setInterval(getNumber, 1000);
