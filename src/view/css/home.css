@@ -3,6 +3,10 @@ img {
     width: 100%;
 }
 
+canvas {
+    cursor: pointer;
+}
+
 .col {
     height: 90% !important;
     text-align: center;
