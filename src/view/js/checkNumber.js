@@ -4,8 +4,8 @@ let undo = document.getElementById("undo");
 let clearAll = document.getElementById("clearAll");
 let context = canvas.getContext("2d");
 
-var window_height = papers.offsetHeight;
-var window_width = papers.offsetWidth;
+var window_height = 618;
+var window_width = 770;
 
 canvas.width = window_width;
 canvas.height = window_height;
@@ -23,10 +23,9 @@ class Check {
 
   draw(context) {
     context.beginPath();
-    context.moveTo(this.xPoint - 10, this.yPoint - 10);
-    context.lineTo(this.xPoint + 10, this.yPoint + 10);
+    context.arc(this.xPoint, this.yPoint, 5, 2 * Math.PI, false);
     context.strokeStyle = "red";
-    context.lineWidth = 5;
+    context.lineWidth = 3;
     context.stroke();
   }
 }
